@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Digital_clock.css">
+</head>
+<body>
+    <div class="border_con">
+            <div class="clock1">
+               <li>09</li>
+               <li>:</li>
+               <li>38</li>
+               <li>:</li>
+               <li>01</li>
+               <li>PM</li>
+            </div>     
+    </div>
+    <div class="border_con">
+            <div class="clock2">
+               <li id="hours">09</li>
+               <li>:</li>
+               <li id="min">38</li>
+               <li>:</li>
+               <li id="sec">01</li>
+               <li>PM</li>
+            </div>     
+    </div>
+    <script>
+        function displayTime(){
+            var datetime=new Date();
+            var hour=datetime.getHours();
+            var min=datetime.getMinutes();
+            var sec=datetime.getSeconds();
+            var digital=document.getElementById('digital');
+
+            document.getElementById('hours').innerHTML=hour;
+            document.getElementById('min').innerHTML=min;
+            document.getElementById('sec').innerHTML=sec;
+        }
+        setInterval(displayTime)
+    </script>
+</body>
+</html>
